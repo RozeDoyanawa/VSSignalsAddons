@@ -1,0 +1,21 @@
+{
+	"ingredientPattern": "_H_,WGP,IBC",
+	"ingredients": {
+		"H": {
+			"type": "item",
+			"code": "game:hammer-*",
+			"isTool": true
+		},
+		"W": { "type": "item", "code": "signals:el_wire" },
+		"P": { "type": "item", "code": "game:plank-*"},
+		"G": { "type": "item", "code": "game:glassslab-*"},
+		"I": { "type": "item", "code": "game:ingot-iron"},
+		"B": { "type": "item", "code": "game:ingot-brass"},
+		"C": { "type": "item", "code": "game:ingot-copper"}
+	},
+
+	"width": 3,
+	"height": 3,
+	"shapeless": false,
+	"output": { "type": "block", "code": "vssignalsaddons:blockcontactor-off-north-down", "quantity": 1 }
+}

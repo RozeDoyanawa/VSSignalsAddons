@@ -1,0 +1,26 @@
+[
+	{
+		"ingredientPattern": "I,P",
+		"ingredients": {
+			"I": { "type": "item", "code": "game:wrench-*" , "isTool": true},
+			"P": { "type": "block", "code": "signals:knifeswitch-*"}
+		},
+	
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": { "type": "block", "code": "vssignalsaddons:buttonswitchinv-north-down-off", "quantity": 1 }
+	},
+	{
+		"ingredientPattern": "I,P",
+		"ingredients": {
+			"I": { "type": "item", "code": "game:wrench-*" , "isTool": true},
+			"P": { "type": "block", "code": "vssignalsaddons:buttonswitchinv-*"}
+		},
+	
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": { "type": "block", "code": "signals:knifeswitch-*", "quantity": 1 }
+	}
+]

@@ -1,0 +1,125 @@
+{
+  "code": "pipe",
+  "class": "vssignalsppexlink.BlockSignalValve",
+  "entityClass": "vssignalsppexlink.BlockEntitySignalValve",
+  "entityBehaviors": [
+    {
+      "name": "BEBehaviorSignalConnector",
+      "properties": {
+        "signalNodes": [
+          {
+            "index": 0,
+            "isSource": false
+          }
+        ]
+      }
+    }
+  ],
+  "blockmaterial": "Metal",
+  "sounds": {
+    "place": "game:block/anvil",
+    "break": "game:block/anvil",
+    "hit": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "maxstacksize": 1,
+  "attributes": {
+    "handbook": {
+      "extraSections": [
+        { "title": "signals:block-handbooktitle-signals", "text": "vssignalsaddons:block-handbooktext-pipe-signalvalve" }
+      ]
+    },
+    "signalNodes": [
+      {
+        "index": 0,
+        "name": "con-coil",
+        "x1": 0.5,
+        "y1": 0.75,
+        "z1": 0.40625,
+        "x2": 0.6875,
+        "y2": 0.9375,
+        "z2": 0.59375,
+        "rotateXbytype": {
+          "*-ud-*": 90,
+          "*-du-*": 270
+        },
+        "rotateYbytype": {
+          "*-we-*": 90,
+          "*-sn-*": 180,
+          "*-ew-*": 270
+        },
+        "rotateZbytype": {
+          "*-du-*": 180
+        }
+      }
+    ]
+  },
+  "creativeinventory": {
+    "general": ["*-signalvalve-sn-*"],
+    "ppex": ["*-signalvalve-sn-*"]
+  },
+  "behaviors": [{ "name": "Lockable" }],
+  "variantgroups": [
+    { "code": "type", "states": ["signalvalve"] },
+    { "code": "orientation", "states": ["ns", "we", "ud", "sn", "ew", "du"] },
+    {
+      "code": "material",
+      "states": ["iron", "steel"]
+    }
+  ],
+  "shapeByType": {
+    "*-signalvalve-ns-*": { "base": "pipes/pipe-signalvalve-base" },
+    "*-signalvalve-we-*": { "base": "pipes/pipe-signalvalve-base", "rotateY": 90 },
+    "*-signalvalve-ud-*": { "base": "pipes/pipe-signalvalve-base", "rotateX": 90 },
+    "*-signalvalve-sn-*": { "base": "pipes/pipe-signalvalve-base", "rotateY": 180 },
+    "*-signalvalve-ew-*": { "base": "pipes/pipe-signalvalve-base", "rotateY": -90 },
+    "*-signalvalve-du-*": {
+      "base": "pipes/pipe-signalvalve-base",
+      "rotateX": 90,
+      "rotateY": 180
+    }
+  },
+  "shapeInventoryByType": {
+    "*-signalvalve-*": { 
+      "base": "pipes/pipe-signalvalve-off",
+      "rotateY": 180
+    }
+  },
+  "texturesByType": {
+    "*-iron-*": {
+      "iron4": { "base": "game:block/metal/sheet-plain/iron4" }
+    },
+    "*-steel-*": {
+      "iron4": { "base": "game:block/metal/sheet-plain/steel4" }
+    }
+  },
+  "collisionboxes": [
+    {
+      "x1": 0.3125,
+      "y1": 0.3125,
+      "z1": 0,
+      "x2": 0.6875,
+      "y2": 0.6875,
+      "z2": 1
+    }
+  ],
+  "selectionboxes": [
+    {
+      "x1": 0.3125,
+      "y1": 0.3125,
+      "z1": 0,
+      "x2": 0.6875,
+      "y2": 0.6875,
+      "z2": 1
+    }
+  ],
+  "renderpass": "OpaqueNoCull",
+  "faceCullMode": "NeverCull",
+  "lightAbsorption": 0,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  }
+}

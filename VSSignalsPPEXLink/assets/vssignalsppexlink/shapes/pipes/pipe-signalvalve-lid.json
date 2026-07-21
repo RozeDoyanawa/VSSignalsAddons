@@ -1,0 +1,59 @@
+{
+	"editor": {
+		"collapsedPaths": ",Root/Cube49,Root/HandleClosed,Root/Cube2,Root/spiral,Root/Cube2/Cube18/Cube22,Root/Cube41,Root/HandleClosed/spiral,Root/HandleOpen,Root/Cube2/Cube18/Cube25,Root/Handle/spiral",
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"material": [16,16],
+		"normal4": [16,16]
+	},
+	"textures": {
+		"col0": "game:block/creative/col0",
+		"col75": "game:block/creative/col75",
+		"aged-ceramic2": "game:block/clay/aged-ceramic2",
+		"ceramic-dark": "game:block/clay/ceramic-dark",
+		"rustyglow": "game:block/machine/statictranslocator/rustyglow",
+		"terminal": "game:block/metal/corroded/normal3",
+		"normal4": "game:block/metal/corroded/normal4",
+		"brass3": "game:block/metal/sheet-plain/brass3",
+		"iron4": "game:block/metal/sheet-plain/iron4"
+	},
+	"elements": [
+		{
+			"name": "Lid",
+			"from": [ 10.0, 6.0, 10.0 ],
+			"to": [ 14.0, 10.0, 11.0 ],
+			"rotationOrigin": [ 10.0, 6.0, 10.0 ],
+			"rotationX": -179.9999,
+			"rotationZ": -179.9999,
+			"faces": {
+				"north": { "texture": "#iron4", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"east": { "texture": "#iron4", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"south": { "texture": "#iron4", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"west": { "texture": "#iron4", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"up": { "texture": "#iron4", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+				"down": { "texture": "#iron4", "uv": [ 0.0, 0.0, 4.0, 1.0 ] }
+			}
+		}
+	],
+	"animations": [
+		{
+			"name": "open",
+			"code": "open",
+			"quantityframes": 30,
+			"onActivityStopped": "EaseOut",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Lid": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		}
+	]
+}

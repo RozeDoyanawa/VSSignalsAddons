@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSSignalsAddons", "VSSignalsAddons\VSSignalsAddons.csproj", "{A46BF454-0C85-4D13-A196-A339A7FE6985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSSignalsPPEXLink", "VSSignalsPPEXLink\VSSignalsPPEXLink.csproj", "{C5ECAA18-B5CB-43EE-9DD8-45A42BD1EFF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A46BF454-0C85-4D13-A196-A339A7FE6985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A46BF454-0C85-4D13-A196-A339A7FE6985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A46BF454-0C85-4D13-A196-A339A7FE6985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A46BF454-0C85-4D13-A196-A339A7FE6985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4D2471-BF26-4C2E-AF37-B513FB47C815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4D2471-BF26-4C2E-AF37-B513FB47C815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4D2471-BF26-4C2E-AF37-B513FB47C815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4D2471-BF26-4C2E-AF37-B513FB47C815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5ECAA18-B5CB-43EE-9DD8-45A42BD1EFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5ECAA18-B5CB-43EE-9DD8-45A42BD1EFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5ECAA18-B5CB-43EE-9DD8-45A42BD1EFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5ECAA18-B5CB-43EE-9DD8-45A42BD1EFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

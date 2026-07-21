@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Sensor (Cowper Stove - Temperature)",
+    "ingredientPattern": "_H_,RP_",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vssignals:blocktetrode-*",
+        "quantity": 1
+      },
+      "R": {
+        "type": "block",
+        "code": "vssignals:blockresistor-*",
+        "quantity": 2
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "vssignalsppexlink:blockcowperstovetempsensor-north-down"
+    }
+  }
+]

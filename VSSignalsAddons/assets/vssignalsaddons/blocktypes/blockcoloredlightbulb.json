@@ -1,0 +1,236 @@
+﻿{
+    "code": "blockcoloredlightbulb",
+    "class": "BlockSignalConnection",
+    "entityclass": "BlockEntityLightBulb",
+    "entityBehaviors": [
+        {
+            "name": "BEBehaviorSignalConnector",
+            "properties": {
+                "signalNodes": [
+                    {
+                        "index": 0,
+                        "isSource": false
+                    }
+                ]
+            }
+
+
+
+        }
+    ],
+    "attributes": {
+        "handbook": {
+			"extraSections": [
+				{ "title": "signals:block-handbooktitle-signals", "text": "vssignalsaddons:block-handbooktext-lightbulb" }
+			]
+		},
+    "signalNodes": [
+        {
+            "index": 0,
+            "x1": 0.36,
+            "y1": 0.7,
+            "z1": 0.36,
+            "x2": 0.64,
+            "y2": 1.0,
+            "z2": 0.64,
+            "rotateXbytype": {
+                "*-down": 180,
+                "*-south": 90,
+                "*-east": 90,
+                "*-west": 90,
+                "*-north": 270
+            },
+            "rotateYbytype": {
+                "*-west": 180
+            },
+            "rotateZbytype": {
+                "*-west": 270,
+                "*-east": 270
+            }
+        }
+    ]
+    },
+    "behaviors": [
+        {
+            "name": "BlockBehaviorCoverWithDirection",
+            "properties": { "handleDrop": false }
+        }
+    ],
+    "variantgroups": [
+        {
+            "code" : "color",
+            "states" : ["green", "blue", "violet", "red", "yellow", "cyan", "pink"]
+        },
+        {
+            "code": "powered",
+            "states": [ "on", "off" ]
+        },
+        {
+            "code": "orientation",
+            "states": [ "north", "east", "south", "west", "up", "down" ]
+        },
+        {
+            "code": "side",
+            "states": [ "north", "east", "south", "west", "up", "down" ]
+        }
+    ],
+    "lightHsvbytype":{
+        "*-red-on-*-*": [0, 7, 3],
+        "*-blue-on-*-*": [43, 7, 3],
+        "*-green-on-*-*": [20, 7, 3],
+        "*-pink-on-*-*": [55, 3, 3],
+        "*-violet-on-*-*": [52, 7, 3],
+        "*-cyan-on-*-*": [32, 7, 3],
+        "*-yellow-on-*-*": [11, 7, 3]
+    },
+    "textures":{
+        "material": {
+            "base": "block/lampglass_{color}"
+        }
+    },
+    "lightAbsorption": 0,
+    "drawtype": "json",
+    "skipVariants": [ "*-north-north", "*-south-north", "*-north-south", "*-south-south", "*-east-east", "*-east-west", "*-west-east", "*-west-west" ],
+    "shape": {"base": "block/coloredlightbulb_{powered}",
+        "rotateXbytype": {
+            "*-south-up": 180,
+            "*-north-up": 180,
+            "*-west-up": 180,
+            "*-east-up": 180,
+            "*-north-west":180,
+            "*-up-west": 270,
+            "*-down-west":90,
+            "*-down-east":270,
+            "*-south-east":180,
+            "*-up-north":90,
+            "*-down-north":90,
+            "*-east-north":90,
+            "*-west-north":90,
+            "*-up-south":270,
+            "*-down-south":270,
+            "*-east-south":270,
+            "*-west-south":270
+        },
+        "rotateYbytype":{
+            "*-south-down":180,
+            "*-east-down":270,
+            "*-west-down":90,
+            "*-north-up":180,
+            "*-west-up":90,
+            "*-east-up":270,
+            "*-north-west":180,
+            "*-south-west":180,
+            "*-up-west":180,
+            "*-down-west":180,
+            "*-down-north":180,
+            "*-east-north":270,
+            "*-west-north":90,
+            "*-up-south":180,
+            "*-east-south":270,
+            "*-west-south":90
+        },
+        "rotateZbyType":{
+            "*-north-west":90,
+            "*-south-west":90,
+            "*-up-west":90,
+            "*-down-west":90,
+            "*-up-east":90,
+            "*-down-east":90,
+            "*-north-east":90,
+            "*-south-east":90
+        }
+    },
+    "sidesolidByType": {
+        "*-down": {
+            "all": false,
+            "down": true
+        },
+        "*-up": {
+            "all": false,
+            "up": true
+        },
+        "*-north": {
+            "all": false,
+            "north": true
+        },
+        "*-east": {
+            "all": false,
+            "east": true
+        },
+        "*-west": {
+            "all": false,
+            "west": true
+        },
+        "*-south": {
+            "all": false,
+            "south": true
+        }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "blockmaterial": "Metal",
+    "creativeinventory": {
+        "general": [ "*-off-north-down" ],
+        "signals": [ "*-off-north-down" ]
+    },
+    "drops": [
+        {"type": "block", "code": "vssignalsaddons:blockcoloredlightbulb-{color}-off-north-down"}
+    ],
+    "replaceable": 300,
+    "resistance": 1,
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.0625,
+        "z2": 1,
+        "rotateXByType": {
+            "*-up": 180,
+            "*-north": 90,
+            "*-east": 90,
+            "*-west": 90,
+            "*-south": 270
+        },
+        "rotateYByType": {
+            "*-east": 180,
+            "*-west": 0
+        },
+        "rotateZByType": {
+            "*-east": 270,
+            "*-west": 270
+        }
+    },
+    "collisionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.0625,
+        "z2": 1,
+        "rotateXByType": {
+            "*-up": 180,
+            "*-north": 90,
+            "*-east": 90,
+            "*-west": 90,
+            "*-south": 270
+        },
+        "rotateYByType": {
+            "*-east": 180,
+            "*-west": 0
+        },
+        "rotateZByType": {
+            "*-east": 270,
+            "*-west": 270
+        }
+    },
+    "guiTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": 0.0625,
+            "z": 0.5
+        }
+    }
+
+}

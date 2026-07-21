@@ -1,0 +1,22 @@
+{
+    "vssignalsaddons:block-handbooktitle-signals": "",
+    
+    "vssignalsaddons:block-handbooktext-cowper-stove-sensor": "Temperature sensor for cowper stoves. Must be placed on the outside of the stove so that its one block between itself and a radiator inside the stove.",
+    "vssignalsaddons:block-handbooktext-pipe-signalvalve": "Pipe valve that is signal-network controlled. Giving a signal with strength 1 or above on its input will open the valve. No manual operation allowed.",
+    "vssignalsaddons:block-handbooktext-pipe-temperature-sensor": "Pipe section that allows monitoring of pipe network temperature through signals. The alarm output will be outputting a 15 signal strength when the temperature goes above the set value. The level sensor outputs a 15-level signal scaled between 0 and 2000.",
+    "vssignalsaddons:block-handbooktext-pipe-pressure-sensor": "Pipe section that allows monitoring of pipe network pressure through signals. The alarm output will be outputting a 15 signal strength when the pressure goes above the set value. The level sensor outputs a 15-level signal scaled between 0 and pipe burst pressure",
+    
+    "vssignalsppexlink:block-pipe-signalvalve-*": "Piping (Valve - Signal Controlled)",
+    "vssignalsppexlink:block-pipe-signalpressuresensor-*": "Piping (Signal Sensor - Pressure)",
+    "vssignalsppexlink:block-pipe-signaltemperaturesensor-*": "Piping (Signal Sensor - Temperature)",
+    
+    "vssignalsppexlink:block-blockcowperstovetempsensor-*": "Temperature Sensor (Cowper Stove)",
+  
+    "vssignalsppexlink:gaspressuresensor-info-rating": "Switchover pressure: {0}(g)\n\n",
+    "vssignalsppexlink:gastemperaturesensor-info-rating": "Switchover temperature: {0}(g)\n\n",
+    "vssignalsppexlink:edit-switchover-pressure": "Switchover Pressure\n\n",
+    "vssignalsppexlink:edit-switchover-temperature": "Switchover Temperature\n\n",
+    
+    "vssignalsppexlink:connection-name-con-alarm": "Alarm Output",
+    "vssignalsppexlink:connection-name-con-level": "Level Output"
+}

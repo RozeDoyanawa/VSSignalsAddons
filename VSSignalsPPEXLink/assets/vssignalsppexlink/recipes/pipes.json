@@ -1,0 +1,124 @@
+[
+  {
+    "ingredientPattern": "_H_,RPT",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "ppex:pipe-valve-ns-*-off",
+        "name": "metal",
+        "allowedVariants": ["iron", "steel"],
+        "quantity": 1
+      },
+      "T": {
+        "type": "block",
+        "code": "vssignals:blocktetrode-*",
+        "quantity": 1
+      },
+      "R": {
+        "type": "block",
+        "code": "vssignals:blockresistor-*",
+        "quantity": 2
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "vssignalsppexlink:pipe-signalvalve-sn-{metal}"
+    }
+  },
+  {
+    "ingredientPattern": "_H_,RPT",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "ppex:pipe-pressurevalve-ns-*",
+        "name": "metal",
+        "allowedVariants": ["iron", "steel"],
+        "quantity": 1
+      },
+      "T": {
+        "type": "block",
+        "code": "vssignals:blocktetrode-*",
+        "quantity": 1
+      },
+      "R": {
+        "type": "block",
+        "code": "vssignals:blockresistor-*",
+        "quantity": 2
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
+    }
+  },
+  {
+    "ingredientPattern": "_H_,_P_",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}",
+        "name": "metal",
+        "allowedVariants": ["iron", "steel"],
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": {
+        "type": "item",
+        "code": "game:wrench-*",
+        "isTool": true
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "vssignalsppexlink:pipe-signaltempsensor-sn-{metal}"
+    }
+  },
+  {
+    "ingredientPattern": "_H_,_P_",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vssignalsppexlink:pipe-signaltempsensor-sn-{metal}",
+        "name": "metal",
+        "allowedVariants": ["iron", "steel"],
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": {
+        "type": "item",
+        "code": "game:wrench-*",
+        "isTool": true
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "block",
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
+    }
+  }
+]

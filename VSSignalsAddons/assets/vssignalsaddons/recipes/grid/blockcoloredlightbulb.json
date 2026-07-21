@@ -1,0 +1,144 @@
+[
+	{
+		"ingredientPattern": "IPD",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:crushed-olivine"
+			},
+			"D": {
+				"type": "item",
+				"code": "game:clearquartz"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-green-off-north-down",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "IP",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:Amethyst"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-violet-off-north-down",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "IP",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:rosequartz"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-pink-off-north-down",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "IPD",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:crushed-lapislazuli"
+			},
+			"D": {
+				"type": "item",
+				"code": "game:clearquartz"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-blue-off-north-down",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "IPD",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:crushed-cinnabar"
+			},
+			"D": {
+				"type": "item",
+				"code": "game:clearquartz"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-red-off-north-down",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "IPD",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:powder-sulfur"
+			},
+			"D": {
+				"type": "item",
+				"code": "game:clearquartz"
+			},
+			"P": {
+				"type": "item",
+				"code": "signals:el_wire"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "vssignalsaddons:blockcoloredlightbulb-yellow-off-north-down",
+			"quantity": 1
+		}
+	}
+]

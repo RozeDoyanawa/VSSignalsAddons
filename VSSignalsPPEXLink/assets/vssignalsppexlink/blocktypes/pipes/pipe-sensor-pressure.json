@@ -1,0 +1,177 @@
+{
+  "code": "pipe",
+  "class": "vssignalsppexlink.BlockSignalPipeSensors",
+  "entityClass": "vssignalsppexlink.BlockEntityPipeSensorPressure",
+  "entityBehaviors": [
+    {
+      "name": "BEBehaviorSignalConnector",
+      "properties": {
+        "signalNodes": [
+          {
+            "index": 0,
+            "isSource": true
+          },
+          {
+            "index": 1,
+            "isSource": true
+          }
+        ]
+      }
+    }
+  ],
+  "blockmaterial": "Metal",
+  "sounds": {
+    "place": "game:block/anvil",
+    "break": "game:block/anvil",
+    "hit": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "maxstacksize": 16,
+  "creativeinventory": {
+    "general": ["*-signalpressuresensor-ns-*"],
+    "ppex": ["*-signalpressuresensor-ns-*"]
+  },
+  "attributes": {
+    "handbook": {
+      "extraSections": [
+        { "title": "signals:block-handbooktitle-signals", "text": "vssignalsaddons:block-handbooktext-pipe-pressure-sensor" }
+      ],
+      "groupBy": [
+        "pipe-signalpressuresensor-*"
+      ]
+    },
+    "signalNodes": [
+      {
+        "index": 0,
+        "name": "con-alarm",
+        "x1": 0.5,
+        "y1": 0.75,
+        "z1": 0.28125,
+        "x2": 0.6875,
+        "y2": 0.9375,
+        "z2": 0.46875,
+        "rotateXbytype": {
+          "*-ud-*": 90,
+          "*-du-*": 270
+        },
+        "rotateYbytype": {
+          "*-we-*": 90,
+          "*-sn-*": 180,
+          "*-ew-*": 270
+        },
+        "rotateZbytype": {
+          "*-du-*": 180
+        }
+      },
+      {
+        "index": 1,
+        "name": "con-level",
+        "x1": 0.5,
+        "y1": 0.75,
+        "z1": 0.53125,
+        "x2": 0.6875,
+        "y2": 0.9375,
+        "z2": 0.71875,
+        "rotateXbytype": {
+          "*-ud-*": 90,
+          "*-du-*": 270
+        },
+        "rotateYbytype": {
+          "*-we-*": 90,
+          "*-sn-*": 180,
+          "*-ew-*": 270
+        },
+        "rotateZbytype": {
+          "*-du-*": 180
+        }
+      }
+    ],
+    "selectionKnobs": [
+      {
+        "index" : 0,
+        "x1": 0.875,
+        "y1": 0.515625,
+        "z1": 0.421875,
+        "x2": 1,
+        "y2": 0.734375,
+        "z2": 0.640625,
+        "rotateXbytype": {
+          "*-ud-*": 90,
+          "*-du-*": 270
+        },
+        "rotateYbytype": {
+          "*-we-*": 90,
+          "*-sn-*": 180,
+          "*-ew-*": 270
+        },
+        "rotateZbytype": {
+          "*-du-*": 180
+        }
+      }
+    ]
+  },
+  "behaviors": [{ "name": "Lockable" }],
+  "variantgroups": [
+    { "code": "type", "states": ["signalpressuresensor"] },
+    { "code": "orientation", "states": ["ns", "we", "ud", "sn", "ew", "du"] },
+    {
+      "code": "material",
+      "states": ["iron", "steel"]
+    }
+  ],
+  "shapebytype": {
+    "*-signalpressuresensor-ns-*": { "base": "pipes/pipe-sensor-pressure-base" },
+    "*-signalpressuresensor-we-*": { "base": "pipes/pipe-sensor-pressure-base", "rotateY": 90 },
+    "*-signalpressuresensor-ud-*": { "base": "pipes/pipe-sensor-pressure-base", "rotateX": 90 },
+    "*-signalpressuresensor-sn-*": { "base": "pipes/pipe-sensor-pressure-base", "rotateY": 180 },
+    "*-signalpressuresensor-ew-*": { "base": "pipes/pipe-sensor-pressure-base", "rotateY": -90 },
+    "*-signalpressuresensor-du-*": {
+      "base": "pipes/pipe-sensor-pressure-base",
+      "rotateX": 90,
+      "rotateY": 180
+    }
+  },
+  "shapeInventoryByType": {
+    "*-signalpressuresensor-*": {
+      "base": "pipes/pipe-sensor-pressure-base",
+      "rotateY": 180
+    }
+  },
+  "texturesByType": {
+    "*-iron": {
+      "iron4": { "base": "game:block/metal/sheet-plain/iron4" }
+    },
+    "*-steel": {
+      "iron4": { "base": "game:block/metal/sheet-plain/steel4" }
+    }
+  },
+  "collisionboxes": [
+    {
+      "x1": 0.3125,
+      "y1": 0.3125,
+      "z1": 0,
+      "x2": 0.6875,
+      "y2": 0.6875,
+      "z2": 1
+    }
+  ],
+  "selectionboxes": [
+    {
+      "x1": 0.3125,
+      "y1": 0.3125,
+      "z1": 0,
+      "x2": 0.6875,
+      "y2": 0.6875,
+      "z2": 1
+    }
+  ],
+  "renderpass": "OpaqueNoCull",
+  "faceCullMode": "NeverCull",
+  "lightAbsorption": 0,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  }
+}

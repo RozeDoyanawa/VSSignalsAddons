@@ -1,0 +1,48 @@
+=========================================================================
+NOTICES FOR THIRD-PARTY DEPENDENCIES (MOD B)
+=========================================================================
+
+This project incorporates content and code from multiple third-party 
+resources, used under the terms of their respective permissions:
+
+-------------------------------------------------------------------------
+1. APACHE-LICENSED CONTENT
+-------------------------------------------------------------------------
+Project: Vintage Story Signals Mod
+Author: VonZeeple
+Source: https://mods.vintagestory.at/signals
+License: Apache License 2.0 (see the accompanying LICENSE-APACHE file)
+
+Copyright Copyright 2020 VonZeeple and contributors
+
+Modifications Notice:
+- Copied parts of src/signalNetwork/BlockConnection.cs
+
+-------------------------------------------------------------------------
+2. PRIVATELY PERMITTED CONTENT
+-------------------------------------------------------------------------
+Project: "Steelmaking Expanded" and "Pipes and Power Expanded" 
+Author: fallenstar / ringavirda
+Sources: 
+ - https://mods.vintagestory.at/smex  (https://github.com/ringavirda/modding-vsexpanded)
+ - https://mods.vintagestory.at/ppex  (https://github.com/ringavirda/modding-vsexpanded)
+
+License/Permissions: 
+Used with explicit permission from the author. Per the developer's request,
+credit is provided via the GitHub link listed above. The author has granted 
+full rights to reuse, modify, and redistribute their assets and code for 
+this project.
+
+
+=========================================================================
+DEVELOPER COPYRIGHT NOTICE
+=========================================================================
+
+All other original code, assets, and configurations created for this mod 
+are proprietary and remain the exclusive intellectual property of the author.
+
+Copyright (c) 2026 Roze Doyanawa. 
+
+This original content is NOT restricted by "All Rights Reserved." Instead, 
+it is licensed to the community under the specific terms outlined in the 
+primary 'LICENSE' file included with this mod (Vintage Story Only + Attribution)

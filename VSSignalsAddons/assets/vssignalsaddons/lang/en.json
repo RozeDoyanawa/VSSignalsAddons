@@ -1,0 +1,12 @@
+{
+    "vssignalsaddons:block-blockcoloredlightbulb-red-*": "Light bulb (Red)",
+    "vssignalsaddons:block-blockcoloredlightbulb-blue-*": "Light bulb (Blue)",
+    "vssignalsaddons:block-blockcoloredlightbulb-green-*": "Light bulb (Green)",
+    "vssignalsaddons:block-blockcoloredlightbulb-pink-*": "Light bulb (Pink)",
+    "vssignalsaddons:block-blockcoloredlightbulb-violet-*": "Light bulb (Violet)",
+    "vssignalsaddons:block-blockcoloredlightbulb-yellow-*": "Light bulb (Yellow)",
+    "vssignalsaddons:block-buttonswitchinv-*": "Button switch (Breaking)",
+    "vssignalsaddons:block-handbooktext-buttoninv":"Break signal when pressed.",
+    "vssignalsaddons:block-blockcontactor-*": "Contactor",
+    "vssignalsaddons:block-handbooktext-contactor":"Used to control another signal with another. Passes through signal through normally closed (NC) ports when not active. Passwes through singal through normally open (NO) pair when energized",
+}

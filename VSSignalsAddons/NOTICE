@@ -1,0 +1,34 @@
+=========================================================================
+NOTICES FOR THIRD-PARTY DEPENDENCIES
+=========================================================================
+
+This project incorporates content and code from the following third-party 
+resource, which is used under the terms of its respective license:
+
+Project: Vintage Story Signals Mod
+Author: VonZeeple
+Source: https://mods.vintagestory.at/signals
+License: Apache License 2.0 (see the accompanying LICENSE-APACHE file)
+
+Copyright Copyright 2020 VonZeeple and contributors
+
+-------------------------------------------------------------------------
+Modifications Notice:
+-------------------------------------------------------------------------
+Portions of the original assets/source code have been modified for integration 
+into this mod. These changes include:
+- Copied and altered assets/signals/shapes/block/lightbulb.json
+- Copied parts of src/signalNetwork/BlockConnection.cs
+
+=========================================================================
+DEVELOPER COPYRIGHT NOTICE
+=========================================================================
+
+All other original code, assets, and configurations created for this mod 
+are proprietary and remain the exclusive intellectual property of the author.
+
+Copyright (c) 2026 Roze Doyanawa. 
+
+This original content is NOT restricted by "All Rights Reserved." Instead, 
+it is licensed to the community under the specific terms outlined in the 
+primary 'LICENSE' file included with this mod (Vintage Story Only + Attribution)
