@@ -82,7 +82,7 @@ jobs:
         cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/VSSignalsAddons/
         cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
         cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
-        cd dist/VSSignalsAddons && zip -r ../../VSSignalsAddons-Nightly.zip .
+        cp -r VSSignalsAddons/assets dist/VSSignalsAddons/
 
     - name: Package VSSignalsPPEXLink
       run: |
@@ -91,16 +91,16 @@ jobs:
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modinfo.json dist/VSSignalsPPEXLink/
-        cd dist/VSSignalsPPEXLink && zip -r ../../VSSignalsPPEXLink-Nightly.zip .
+        cp -r VSSignalsPPEXLink/assets dist/VSSignalsPPEXLink/
 
     - name: Upload VSSignalsAddons Artifact
       uses: actions/upload-artifact@v7
       with:
-        name: VSSignalsAddons-Nightly
-        path: VSSignalsAddons-Nightly.zip
+        name: VSSignalsAddons-Nightly.zip
+        path: dist/VSSignalsAddons
 
     - name: Upload VSSignalsPPEXLink Artifact
       uses: actions/upload-artifact@v7
       with:
-        name: VSSignalsPPEXLink-Nightly
-        path: VSSignalsPPEXLink-Nightly.zip
+        name: VSSignalsPPEXLink-Nightly.zip
+        path: dist/VSSignalsPPEXLink-Nightly
