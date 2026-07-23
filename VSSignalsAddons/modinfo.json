@@ -6,9 +6,9 @@
     "authors": [
         "Roze"
     ],
-	"license": "Custom (Vintage Story Only + Attribution, see LICENSE)",
     "description": "Additional components for Vintage Story mod Signals. \r\nCurrently features: \r\n * 7 additional light variants with different colors\r\n * A contactor block, basically a single-block signal-controlled switch. \r\n * A normally closed switch, eg. it breaks connection when pressed instead of making a connection.",
     "version": "0.1.0",
+    "side" : "Universal",
     "dependencies": {
         "game": "1.22.0",
         "signals": "0.3.0"

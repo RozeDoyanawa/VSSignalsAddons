@@ -6,7 +6,6 @@
     "authors": [
         "Roze"
     ],
-	"license": "Custom (Vintage Story Only + Attribution, see LICENSE)",
     "description": "Components to link Vintage Story mod Signals and Pipes & Power Expanded",
     "version": "0.1.0",
     "dependencies": {
