@@ -80,6 +80,7 @@ jobs:
         mkdir -p dist/VSSignalsAddons
         cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/VSSignalsAddons/
         cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/VSSignalsAddons/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.deps.json dist/VSSignalsAddons/
         cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
         cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
         cp -r VSSignalsAddons/assets dist/VSSignalsAddons/
@@ -89,6 +90,7 @@ jobs:
         mkdir -p dist/VSSignalsPPEXLink
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.dll dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.deps.json dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modinfo.json dist/VSSignalsPPEXLink/
         cp -r VSSignalsPPEXLink/assets dist/VSSignalsPPEXLink/
@@ -103,4 +105,4 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: VSSignalsPPEXLink-Nightly.zip
-        path: dist/VSSignalsPPEXLink-Nightly
+        path: dist/VSSignalsPPEXLink
