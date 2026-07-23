@@ -1,0 +1,55 @@
+name: Package Vintage Story Mods
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - '**/modinfo.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Build Solution
+      run: dotnet build VSSignalsAddons.sln --configuration Debug
+
+    - name: Package VSSignalsAddons
+      run: |
+        mkdir -p dist/ModOne
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/ModOne/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/ModOne/
+        cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
+        cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
+        cd dist/VSSignalsAddons && zip -r ../../VSSignalsAddons-Nightly.zip .
+
+    - name: Package VSSignalsPPEXLink
+      run: |
+        mkdir -p dist/ModTwo
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.dll dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/modinfo.json dist/VSSignalsPPEXLink/
+        cd dist/VSSignalsPPEXLink && zip -r ../../VSSignalsPPEXLink-Nightly.zip .
+
+    - name: Upload VSSignalsAddons Artifact
+      uses: VSSignalsAddons/upload-artifact@v4
+      with:
+        name: VSSignalsPPEXLink-Nightly
+        path: VSSignalsAddons-Nightly.zip
+
+    - name: Upload VSSignalsPPEXLink Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: VSSignalsPPEXLink-Nightly
+        path: VSSignalsPPEXLink-Nightly.zip
