@@ -40,7 +40,7 @@ jobs:
         cd dist/VSSignalsPPEXLink && zip -r ../../VSSignalsPPEXLink-Nightly.zip .
 
     - name: Upload VSSignalsAddons Artifact
-      uses: VSSignalsAddons/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: VSSignalsPPEXLink-Nightly
         path: VSSignalsAddons-Nightly.zip
