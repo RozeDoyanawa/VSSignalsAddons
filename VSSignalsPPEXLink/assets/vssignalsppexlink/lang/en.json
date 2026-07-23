@@ -8,7 +8,7 @@
     
     "vssignalsppexlink:block-pipe-signalvalve-*": "Piping (Valve - Signal Controlled)",
     "vssignalsppexlink:block-pipe-signalpressuresensor-*": "Piping (Signal Sensor - Pressure)",
-    "vssignalsppexlink:block-pipe-signaltemperaturesensor-*": "Piping (Signal Sensor - Temperature)",
+    "vssignalsppexlink:block-pipe-signaltempsensor-*": "Piping (Signal Sensor - Temperature)",
     
     "vssignalsppexlink:block-blockcowperstovetempsensor-*": "Temperature Sensor (Cowper Stove)",
   
