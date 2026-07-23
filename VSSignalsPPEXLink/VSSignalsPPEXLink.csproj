@@ -9,16 +9,20 @@
 
     <ItemGroup>
         <Reference Include="exlib">
-          <HintPath>..\..\modding-vsexpanded\src\ExpandedLib\obj\Debug\exlib.dll</HintPath>
+		  <HintPath Condition="Exists('..\..\modding-vsexpanded\src\ExpandedLib\obj\Debug\exlib.dll')">..\..\modding-vsexpanded\src\ExpandedLib\obj\Debug\exlib.dll</HintPath>
+          <HintPath Condition="!Exists('..\..\modding-vsexpanded\src\ExpandedLib\obj\Debug\exlib.dll')">..\Lib\exlib.dll</HintPath>
         </Reference>
         <Reference Include="PipesAndPowerExpanded">
-          <HintPath>..\..\modding-vsexpanded\src\PipesAndPowerExpanded\bin\Debug\Mods\mod\PipesAndPowerExpanded.dll</HintPath>
+		  <HintPath Condition="Exists('..\..\modding-vsexpanded\src\PipesAndPowerExpanded\obj\Debug\PipesAndPowerExpanded.dll')">..\..\modding-vsexpanded\src\PipesAndPowerExpanded\obj\Debug\PipesAndPowerExpanded.dll</HintPath>
+          <HintPath Condition="!Exists('..\..\modding-vsexpanded\src\PipesAndPowerExpanded\obj\Debug\PipesAndPowerExpanded.dll')">..\Lib\PipesAndPowerExpanded.dll</HintPath>
         </Reference>
         <Reference Include="signals">
-          <HintPath>..\..\VSSignals\bin\Debug\net10.0\signals.dll</HintPath>
+		  <HintPath Condition="Exists('..\..\VSSignals\bin\Debug\net10.0\signals.dll')">..\..\VSSignals\bin\Debug\net10.0\signals.dll</HintPath>
+          <HintPath Condition="!Exists('..\..\VSSignals\bin\Debug\net10.0\signals.dll')">..\Lib\signals.dll</HintPath>
         </Reference>
         <Reference Include="SteelmakingExpanded">
-          <HintPath>C:\Users\Roze\AppData\Roaming\VintagestoryData\Cache\unpack\smex_0.9.4.zip_f54a957bb9ca\SteelmakingExpanded.dll</HintPath>
+		  <HintPath Condition="Exists('..\..\modding-vsexpanded\src\SteelmakingExpanded\obj\Debug\SteelmakingExpanded.dll')">..\..\modding-vsexpanded\src\SteelmakingExpanded\obj\Debug\SteelmakingExpanded.dll</HintPath>
+          <HintPath Condition="!Exists('..\..\modding-vsexpanded\src\SteelmakingExpanded\obj\Debug\SteelmakingExpanded.dll')">..\Lib\SteelmakingExpanded.dll</HintPath>
         </Reference>
         <Reference Include="VintagestoryAPI">
             <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
