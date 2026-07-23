@@ -73,7 +73,7 @@ jobs:
         echo "Vintage Story Game environment successfully mapped to: $GITHUB_WORKSPACE/vs_game_dir"
 
     - name: Build Solution
-      run: dotnet build VSSignalsAddons.sln --configuration Debug
+      run: dotnet build VSSignalsAddons.sln --configuration Release
 
     - name: Package VSSignalsAddons
       run: |
