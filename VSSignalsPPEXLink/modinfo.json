@@ -7,7 +7,7 @@
         "Roze"
     ],
     "description": "Components to link Vintage Story mod Signals and Pipes & Power Expanded",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "dependencies": {
         "game": "1.22.0",
         "ppex": "0.6.4",
