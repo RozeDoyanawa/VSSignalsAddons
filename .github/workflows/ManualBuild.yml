@@ -1,0 +1,106 @@
+name: Package Vintage Story Mods - Manual Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Download Dependency Mod Binaries
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to bypass GitHub API rate limits
+        VERSION: ${{ inputs.dependency_version }}
+      run: |
+        # 1. Create the reference directory defined in your .csproj
+        mkdir -p Lib
+        mkdir -p tmp_zips
+        
+        gh release download --repo VonZeeple/Signals --pattern "*.zip" --output Signals.zip
+        unzip Signals.zip 'signals.dll' 'signals.pdb' 'signals.deps.json' -d Lib/
+
+        gh release download --repo ringavirda/modding-vsexpanded --pattern "*.zip" --dir tmp_zips/
+        
+        TARGET_PATTERN='^(ppex|smex|exlib)_[0-9]+\x2E[0-9]+\x2E[0-9]+.*\.zip$'
+        
+        for FILE_PATH in tmp_zips/*; do
+          FILENAME=$(basename "$FILE_PATH")
+          
+          if [[ "$FILENAME" =~ $TARGET_PATTERN ]]; then
+            echo "Match found: '$FILENAME'. Extracting runtime binaries..."
+            
+            unzip -q "$FILE_PATH" '*.dll' '*.pdb' '*.deps.json' -d Lib/ || true
+          else
+            echo "Skipping unrelated asset: '$FILENAME'"
+          fi
+        done
+                
+        rm -rf tmp_zips/
+        echo "Dependencies successfully resolved: $(ls Lib/)"
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Install Vintage Story Basic Template
+      run: |
+        dotnet new install VintageStory.Mod.BasicTemplate
+
+    - name: Fetch and Set Up Vintage Story Game Files
+      run: |
+        # Create a persistent directory for game assemblies inside the workspace
+        mkdir -p vs_game_dir
+        
+        # Pull down the official standalone linux server distribution containing core DLLs
+        VS_VERSION="1.22.3"
+        wget -q "https://cdn.vintagestory.at/gamefiles/stable/vs_server_linux-x64_${VS_VERSION}.tar.gz" -O vs_server.tar.gz
+        
+        # Unpack the package cleanly into our folder
+        tar -xzf vs_server.tar.gz -C vs_game_dir/
+        rm vs_server.tar.gz
+        
+        # Persist the absolute directory path as a global environment variable for later steps
+        # This writes directly to GITHUB_ENV so all remaining pipeline steps can read it
+        echo "VINTAGE_STORY=$GITHUB_WORKSPACE/vs_game_dir" >> $GITHUB_ENV
+        
+        echo "Vintage Story Game environment successfully mapped to: $GITHUB_WORKSPACE/vs_game_dir"
+
+    - name: Build Solution
+      run: dotnet build VSSignalsAddons.sln --configuration Debug
+
+    - name: Package VSSignalsAddons
+      run: |
+        mkdir -p dist/ModOne
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/ModOne/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/ModOne/
+        cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
+        cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
+        cd dist/VSSignalsAddons && zip -r ../../VSSignalsAddons-Nightly.zip .
+
+    - name: Package VSSignalsPPEXLink
+      run: |
+        mkdir -p dist/ModTwo
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.dll dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/modinfo.json dist/VSSignalsPPEXLink/
+        cd dist/VSSignalsPPEXLink && zip -r ../../VSSignalsPPEXLink-Nightly.zip .
+
+    - name: Upload VSSignalsAddons Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: VSSignalsPPEXLink-Nightly
+        path: VSSignalsAddons-Nightly.zip
+
+    - name: Upload VSSignalsPPEXLink Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: VSSignalsPPEXLink-Nightly
+        path: VSSignalsPPEXLink-Nightly.zip
