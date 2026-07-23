@@ -77,16 +77,16 @@ jobs:
 
     - name: Package VSSignalsAddons
       run: |
-        mkdir -p dist/ModOne
-        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/ModOne/
-        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/ModOne/
+        mkdir -p dist/VSSignalsAddons
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/VSSignalsAddons/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/VSSignalsAddons/
         cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
         cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
         cd dist/VSSignalsAddons && zip -r ../../VSSignalsAddons-Nightly.zip .
 
     - name: Package VSSignalsPPEXLink
       run: |
-        mkdir -p dist/ModTwo
+        mkdir -p dist/VSSignalsPPEXLink
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.dll dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
