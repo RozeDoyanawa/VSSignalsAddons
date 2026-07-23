@@ -27,7 +27,7 @@ jobs:
 
         gh release download --repo ringavirda/modding-vsexpanded --pattern "*.zip" --dir tmp_zips/
         
-        TARGET_PATTERN='^(ppex|smex|exlib)_[0-9]+\x2E[0-9]+\x2E[0-9]+.*\.zip$'
+        TARGET_PATTERN='^(ppex|smex|exlib)_[0-9]+\.[0-9]+\.[0-9]+\.zip$'
         
         for FILE_PATH in tmp_zips/*; do
           FILENAME=$(basename "$FILE_PATH")
