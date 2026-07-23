@@ -96,7 +96,7 @@ jobs:
     - name: Upload VSSignalsAddons Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: VSSignalsPPEXLink-Nightly
+        name: VSSignalsAddons-Nightly
         path: VSSignalsAddons-Nightly.zip
 
     - name: Upload VSSignalsPPEXLink Artifact
