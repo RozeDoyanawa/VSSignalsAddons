@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
         
@@ -27,7 +27,7 @@ jobs:
 
         gh release download --repo ringavirda/modding-vsexpanded --pattern "*.zip" --dir tmp_zips/
         
-        TARGET_PATTERN='^(ppex|smex|exlib)_[0-9]+\x2E[0-9]+\x2E[0-9]+.*\.zip$'
+        TARGET_PATTERN='^(ppex|smex|exlib)_[0-9]+\.[0-9]+\.[0-9]+\.zip$'
         
         for FILE_PATH in tmp_zips/*; do
           FILENAME=$(basename "$FILE_PATH")
@@ -45,7 +45,7 @@ jobs:
         echo "Dependencies successfully resolved: $(ls Lib/)"
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: '10.0.x'
 
@@ -73,34 +73,36 @@ jobs:
         echo "Vintage Story Game environment successfully mapped to: $GITHUB_WORKSPACE/vs_game_dir"
 
     - name: Build Solution
-      run: dotnet build VSSignalsAddons.sln --configuration Debug
+      run: dotnet build VSSignalsAddons.sln --configuration Release
 
     - name: Package VSSignalsAddons
       run: |
-        mkdir -p dist/ModOne
-        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/ModOne/
-        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/ModOne/
+        mkdir -p dist/VSSignalsAddons
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.dll dist/VSSignalsAddons/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.pdb dist/VSSignalsAddons/
+        cp VSSignalsAddons/bin/Release/Mods/mod/VSSignalsAddons.deps.json dist/VSSignalsAddons/
         cp VSSignalsAddons/modicon.png dist/VSSignalsAddons/
         cp VSSignalsAddons/modinfo.json dist/VSSignalsAddons/
-        cd dist/VSSignalsAddons && zip -r ../../VSSignalsAddons-Nightly.zip .
+        cp -r VSSignalsAddons/assets dist/VSSignalsAddons/
 
     - name: Package VSSignalsPPEXLink
       run: |
-        mkdir -p dist/ModTwo
+        mkdir -p dist/VSSignalsPPEXLink
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.dll dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.pdb dist/VSSignalsPPEXLink/
+        cp VSSignalsPPEXLink/bin/Release/Mods/mod/VSSignalsPPEXLink.deps.json dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modicon.png dist/VSSignalsPPEXLink/
         cp VSSignalsPPEXLink/modinfo.json dist/VSSignalsPPEXLink/
-        cd dist/VSSignalsPPEXLink && zip -r ../../VSSignalsPPEXLink-Nightly.zip .
+        cp -r VSSignalsPPEXLink/assets dist/VSSignalsPPEXLink/
 
     - name: Upload VSSignalsAddons Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: VSSignalsPPEXLink-Nightly
-        path: VSSignalsAddons-Nightly.zip
+        name: VSSignalsAddons-Nightly.zip
+        path: dist/VSSignalsAddons
 
     - name: Upload VSSignalsPPEXLink Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: VSSignalsPPEXLink-Nightly
-        path: VSSignalsPPEXLink-Nightly.zip
+        name: VSSignalsPPEXLink-Nightly.zip
+        path: dist/VSSignalsPPEXLink
