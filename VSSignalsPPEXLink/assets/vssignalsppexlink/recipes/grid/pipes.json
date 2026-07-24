@@ -5,9 +5,8 @@
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "ppex:pipe-valve-ns-*",
-        "name": "material",
-        "allowedVariants": ["iron", "steel"],
+        "code": "ppex:pipe-valve-{orientation}-{metal}",
+        "name": "metal",
         "quantity": 1
       },
       "T": {
@@ -26,11 +25,20 @@
         "isTool": true
       }
     },
+    "allowedVariants": {
+      "orientation" : [
+        "sn", "ns"
+      ],
+      "metal" : [
+        "iron",
+        "steel"
+      ]
+    },
     "width": 3,
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalvalve-sn-{material}"
+      "code": "vssignalsppexlink:pipe-signalvalve-sn-{metal}"
     }
   },
   {
@@ -39,8 +47,8 @@
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "ppex:pipe-pressurevalve-ns-*",
-        "name": "material",
+        "code": "ppex:pipe-pressurevalve-sn-*",
+        "name": "metal",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
       },
@@ -64,7 +72,7 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-{material}"
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
     }
   },
   {
@@ -73,8 +81,8 @@
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-*",
-        "name": "material",
+        "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-*",
+        "name": "metal",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
       },
@@ -88,7 +96,7 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signaltempsensor-ns-{material}"
+      "code": "vssignalsppexlink:pipe-signaltempsensor-sn-{metal}"
     }
   },
   {
@@ -97,8 +105,8 @@
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "vssignalsppexlink:pipe-signaltempsensor-ns-*",
-        "name": "material",
+        "code": "vssignalsppexlink:pipe-signaltempsensor-sn-*",
+        "name": "metal",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
       },
@@ -112,7 +120,7 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-{material}"
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
     }
   }
 ]
