@@ -5,8 +5,8 @@ TERMS OF USE AND LICENSE FOR ORIGINAL CONTENT
 Copyright (c) 2026 Roze Doyanawa. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this mod, to use, copy, modify, merge, publish, or distribute original 
-portions of this software, subject to the following strict conditions:
+of this software to use, copy, modify, merge, publish, or distribute
+original portions of this software, subject to the following restrictions:
 
 1. PLATFORM RESTRICTION: The original content of this mod may ONLY be used, 
    modified, or redistributed within modifications created for the video 
@@ -18,17 +18,14 @@ portions of this software, subject to the following strict conditions:
    in your mod's documentation, source code, and ModDB description page, 
    along with a link back to the original source of this project.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 =========================================================================
 THIRD-PARTY OPEN-SOURCE COMPONENTS (APACHE 2.0)
 =========================================================================
 
-Please note that this mod bundles specific third-party components derived 
-from another project. 
-
-- These specific components are NOT governed by the Vintage Story restriction 
-  above. They remain entirely free and open under the Apache License 2.0.
-- For a precise list of which files are Apache-licensed and who authored 
-  them, see the accompanying 'NOTICE' file.
-- The full text of the Apache License 2.0 is included in 'LICENSE-APACHE'.
+This software includes (and/or is derived from) third-party components 
+that are governed by the Apache License 2.0 that are NOT governed by the 
+LICENSE FOR ORIGINAL CONTENT. A comprehensive list of these components 
+may be found in the accompanying 'NOTICE' file. The full text of the 
+Apache License 2.0 is available in the 'LICENSE-APACHE' file.

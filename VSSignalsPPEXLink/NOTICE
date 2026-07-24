@@ -19,7 +19,7 @@ Modifications Notice:
 - Copied parts of src/signalNetwork/BlockConnection.cs
 
 -------------------------------------------------------------------------
-2. PRIVATELY PERMITTED CONTENT
+2. PRIVATE LICENSE-GRANTED CONTENT
 -------------------------------------------------------------------------
 Project: "Steelmaking Expanded" and "Pipes and Power Expanded" 
 Author: fallenstar / ringavirda
@@ -28,21 +28,19 @@ Sources:
  - https://mods.vintagestory.at/ppex  (https://github.com/ringavirda/modding-vsexpanded)
 
 License/Permissions: 
-Used with explicit permission from the author. Per the developer's request,
-credit is provided via the GitHub link listed above. The author has granted 
-full rights to reuse, modify, and redistribute their assets and code for 
-this project.
+Used with explicit permission from the author.
+
+The author has granted full rights to reuse, modify, and redistribute their 
+assets and code for this project, subject to attribution via the GitHub link 
+listed above. 
 
 
 =========================================================================
 DEVELOPER COPYRIGHT NOTICE
 =========================================================================
+Copyright (c) 2020 VonZeeple and contributors
+Copyright (c) 2026 Roze Doyanawa
+Copyright (c) 2026 ringavirda
 
-All other original code, assets, and configurations created for this mod 
-are proprietary and remain the exclusive intellectual property of the author.
-
-Copyright (c) 2026 Roze Doyanawa. 
-
-This original content is NOT restricted by "All Rights Reserved." Instead, 
-it is licensed to the community under the specific terms outlined in the 
-primary 'LICENSE' file included with this mod (Vintage Story Only + Attribution)
+Portions of this software are distributed under the TERMS OF USE AND LICENSE FOR ORIGINAL CONTENT found in 'LICENSE'.
+Portions of this software are distributed under the Apache Software License 2.0.
