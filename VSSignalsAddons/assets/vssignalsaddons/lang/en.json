@@ -5,6 +5,7 @@
     "vssignalsaddons:block-blockcoloredlightbulb-pink-*": "Light bulb (Pink)",
     "vssignalsaddons:block-blockcoloredlightbulb-violet-*": "Light bulb (Violet)",
     "vssignalsaddons:block-blockcoloredlightbulb-yellow-*": "Light bulb (Yellow)",
+    "vssignalsaddons:block-blockcoloredlightbulb-cyan-*": "Light bulb (Cyan)",
     "vssignalsaddons:block-buttonswitchinv-*": "Button switch (Breaking)",
     "vssignalsaddons:block-handbooktext-buttoninv":"Break signal when pressed.",
     "vssignalsaddons:block-blockcontactor-*": "Contactor",
