@@ -1,23 +1,24 @@
 [
   {
+    "name": "Piping (Valve - Signal Controlled)",
     "ingredientPattern": "_H_,RPT",
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "ppex:pipe-valve-ns-*-off",
-        "name": "metal",
+        "code": "ppex:pipe-valve-ns-*",
+        "name": "material",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
       },
       "T": {
         "type": "block",
-        "code": "vssignals:blocktetrode-*",
+        "code": "signals:blocktetrode-*",
         "quantity": 1
       },
       "R": {
-        "type": "block",
-        "code": "vssignals:blockresistor-*",
-        "quantity": 2
+        "type": "item",
+        "code": "signals:solenoid",
+        "quantity": 1
       },
       "H": {
         "type": "item",
@@ -29,27 +30,28 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalvalve-sn-{metal}"
+      "code": "vssignalsppexlink:pipe-signalvalve-sn-{material}"
     }
   },
   {
+    "name": "Piping (Signal Sensor - Pressure)",
     "ingredientPattern": "_H_,RPT",
     "ingredients": {
       "P": {
         "type": "block",
         "code": "ppex:pipe-pressurevalve-ns-*",
-        "name": "metal",
+        "name": "material",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
       },
       "T": {
         "type": "block",
-        "code": "vssignals:blocktetrode-*",
+        "code": "signals:blocktetrode-*",
         "quantity": 1
       },
       "R": {
         "type": "block",
-        "code": "vssignals:blockresistor-*",
+        "code": "signals:blockresistor-*",
         "quantity": 2
       },
       "H": {
@@ -62,23 +64,19 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-{material}"
     }
   },
   {
-    "ingredientPattern": "_H_,_P_",
+    "name": "Piping (Signal Sensor - Temperature)",
+    "ingredientPattern": "_W_,_P_",
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}",
-        "name": "metal",
+        "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-*",
+        "name": "material",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
-      },
-      "H": {
-        "type": "item",
-        "code": "game:hammer-*",
-        "isTool": true
       },
       "W": {
         "type": "item",
@@ -90,23 +88,19 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signaltempsensor-sn-{metal}"
+      "code": "vssignalsppexlink:pipe-signaltempsensor-ns-{material}"
     }
   },
   {
-    "ingredientPattern": "_H_,_P_",
+    "name": "Piping (Signal Sensor - Pressure)",
+    "ingredientPattern": "_W_,_P_",
     "ingredients": {
       "P": {
         "type": "block",
-        "code": "vssignalsppexlink:pipe-signaltempsensor-sn-{metal}",
-        "name": "metal",
+        "code": "vssignalsppexlink:pipe-signaltempsensor-ns-*",
+        "name": "material",
         "allowedVariants": ["iron", "steel"],
         "quantity": 1
-      },
-      "H": {
-        "type": "item",
-        "code": "game:hammer-*",
-        "isTool": true
       },
       "W": {
         "type": "item",
@@ -118,7 +112,7 @@
     "height": 2,
     "output": {
       "type": "block",
-      "code": "vssignalsppexlink:pipe-signalpressuresensor-sn-{metal}"
+      "code": "vssignalsppexlink:pipe-signalpressuresensor-ns-{material}"
     }
   }
 ]
