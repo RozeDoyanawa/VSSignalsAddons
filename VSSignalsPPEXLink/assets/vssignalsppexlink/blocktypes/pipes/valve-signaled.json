@@ -58,6 +58,10 @@
     "general": ["*-signalvalve-sn-*"],
     "ppex": ["*-signalvalve-sn-*"]
   },
+  "dropsByType": {
+      "*-signalvalve-*-iron" : [{ "type": "block", "code": "pipe-signalvalve-sn-iron" }],
+      "*-signalvalve-*-steel" :[ { "type": "block", "code": "pipe-signalvalve-sn-steel" }]
+  },
   "behaviors": [{ "name": "Lockable" }],
   "variantgroups": [
     { "code": "type", "states": ["signalvalve"] },

@@ -28,8 +28,8 @@
   },
   "maxstacksize": 16,
   "creativeinventory": {
-    "general": ["*-signalpressuresensor-ns-*"],
-    "ppex": ["*-signalpressuresensor-ns-*"]
+    "general": ["*-signalpressuresensor-sn-*"],
+    "ppex": ["*-signalpressuresensor-sn-*"]
   },
   "attributes": {
     "handbook": {
@@ -119,6 +119,14 @@
       "states": ["iron", "steel"]
     }
   ],
+  "dropsByType": {
+    "pipe-signalpressuresensor-{orientation}-iron" : [
+      { "type": "block", "code": "vssignalsaddons:pipe-signalpressuresensor-sn-iron" }
+    ],
+    "pipe-signalpressuresensor-{orientation}-steel" : [
+      { "type": "block", "code": "vssignalsaddons:pipe-signalpressuresensor-sn-steel" }
+    ]
+  },
   "shapebytype": {
     "*-signalpressuresensor-ns-*": { "base": "pipes/pipe-sensor-pressure-base" },
     "*-signalpressuresensor-we-*": { "base": "pipes/pipe-sensor-pressure-base", "rotateY": 90 },

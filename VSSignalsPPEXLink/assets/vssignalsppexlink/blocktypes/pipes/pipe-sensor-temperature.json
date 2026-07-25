@@ -28,8 +28,8 @@
   },
   "maxstacksize": 16,
   "creativeinventory": {
-    "general": ["*-signaltempsensor-ns-*"],
-    "ppex": ["*-signaltempsensor-ns-*"]
+    "general": ["*-signaltempsensor-sn-*"],
+    "ppex": ["*-signaltempsensor-sn-*"]
   },
   "attributes": {
     "handbook": {
@@ -119,6 +119,10 @@
       "states": ["iron", "steel"]
     }
   ],
+  "dropsByType": {
+    "*-signaltempsensor-*-iron" : [{ "type": "block", "code": "pipe-signaltempsensor-sn-iron" }],
+    "*-signaltempsensor-*-steel" : [{ "type": "block", "code": "pipe-signaltempsensor-sn-steel" }]
+  },
   "shapebytype": {
     "*-signaltempsensor-ns-*": { "base": "pipes/pipe-sensor-temperature-base" },
     "*-signaltempsensor-we-*": { "base": "pipes/pipe-sensor-temperature-base", "rotateY": 90 },
