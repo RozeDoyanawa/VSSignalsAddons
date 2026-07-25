@@ -23,7 +23,7 @@ public class BlockSignalValve : BlockPipeWithConnection
   public override Dictionary<string, string[]> AllowedOrientations { get; } =
     new() { { "signalvalve", ["ns", "we", "ud", "sn", "ew", "du"] } };
 
-  protected override string GetFallbackOrientation(string? type) => "ns";
+  protected override string GetFallbackOrientation(string? type) => "sn";
 
   public override WorldInteraction[] GetPlacedBlockInteractionHelp(
     IWorldAccessor world,

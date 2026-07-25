@@ -31,7 +31,13 @@ public class BlockSignalPipeSensors : BlockPipeWithConnection
       }
     };
 
-  protected override string GetFallbackOrientation(string? type) => "ns";
+  protected override string GetFallbackOrientation(string? type) =>
+    type switch
+    {
+      "signalpressuresensor" => "sn",
+      "signaltempesensor" => "sn",
+      _ => "ns",
+    };
 
   public override WorldInteraction[] GetPlacedBlockInteractionHelp(
     IWorldAccessor world,
