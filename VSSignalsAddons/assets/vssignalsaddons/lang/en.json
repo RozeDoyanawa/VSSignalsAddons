@@ -9,5 +9,20 @@
     "vssignalsaddons:block-buttonswitchinv-*": "Button switch (Breaking)",
     "vssignalsaddons:block-handbooktext-buttoninv":"Break signal when pressed.",
     "vssignalsaddons:block-blockcontactor-*": "Contactor",
+    //"vssignalsaddons:block-blockjunction2x2x2-*": "Contactor",
     "vssignalsaddons:block-handbooktext-contactor":"Used to control another signal with another. Passes through signal through normally closed (NC) ports when not active. Passwes through singal through normally open (NO) pair when energized",
+    "vssignalsaddons:block-handbooktext-junction":"Simply a block with several connection points for signal wires. Not internally connected.",
+    
+    "vssignalsppexlink:connection-name-con-1": "Point 1",
+    "vssignalsppexlink:connection-name-con-2": "Point 2",
+    "vssignalsppexlink:connection-name-con-3": "Point 3",
+    "vssignalsppexlink:connection-name-con-4": "Point 4",
+    "vssignalsppexlink:connection-name-con-5": "Point 5",
+    "vssignalsppexlink:connection-name-con-6": "Point 6",
+    "vssignalsppexlink:connection-name-con-7": "Point 7",
+    "vssignalsppexlink:connection-name-con-8": "Point 8",
+    
+    "vssignalsppexlink:connection-name-con-nc-*": "NC",
+    "vssignalsppexlink:connection-name-con-no-*": "NO",
+    "vssignalsppexlink:connection-name-con-coil": "Coil"
 }

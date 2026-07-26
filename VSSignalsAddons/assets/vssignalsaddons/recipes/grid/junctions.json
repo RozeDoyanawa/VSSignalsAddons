@@ -1,0 +1,37 @@
+[
+  {
+    "ingredientPattern": "_H_,WP_,_I_",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": { "type": "item", "code": "signals:el_wire" },
+      "P": { "type": "item", "code": "game:plank-*"},
+      "I": { "type": "item", "code": "game:rod-iron"}
+    },
+
+    "width": 3,
+    "height": 3,
+    "shapeless": false,
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2x2-down", "quantity": 1 }
+  },
+  {
+    "ingredientPattern": "_H_,WP_",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": { "type": "item", "code": "signals:el_wire" },
+      "P": { "type": "item", "code": "game:plank-*"}
+    },
+
+    "width": 3,
+    "height": 2,
+    "shapeless": false,
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2-down", "quantity": 1 }
+  }
+]
