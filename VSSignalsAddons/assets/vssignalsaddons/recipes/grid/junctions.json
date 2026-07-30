@@ -8,14 +8,50 @@
         "isTool": true
       },
       "W": { "type": "item", "code": "signals:el_wire" },
-      "P": { "type": "item", "code": "game:plank-*"},
+      "P": { "type": "item", "code": "game:plank-*", "quantity" :  2},
       "I": { "type": "item", "code": "game:rod-iron"}
     },
 
     "width": 3,
     "height": 3,
     "shapeless": false,
-    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2x2-down", "quantity": 1 }
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2x2-north-down", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "_H_,_PW,_I_",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": { "type": "item", "code": "signals:el_wire" },
+      "P": { "type": "item", "code": "game:plank-*", "quantity" :  1},
+      "I": { "type": "item", "code": "game:rod-iron"}
+    },
+
+    "width": 3,
+    "height": 3,
+    "shapeless": false,
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunctionh2x2-north-down", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "_H_,PWP,_I_",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "W": { "type": "item", "code": "signals:el_wire" },
+      "P": { "type": "item", "code": "game:plank-*", "quantity" :  1},
+      "I": { "type": "item", "code": "game:rod-iron"}
+    },
+
+    "width": 3,
+    "height": 3,
+    "shapeless": false,
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2l4-north-down", "quantity": 2 }
   },
   {
     "ingredientPattern": "_H_,WP_",
@@ -26,12 +62,12 @@
         "isTool": true
       },
       "W": { "type": "item", "code": "signals:el_wire" },
-      "P": { "type": "item", "code": "game:plank-*"}
+      "P": { "type": "item", "code": "game:plank-*", "quantity" : 2}
     },
 
     "width": 3,
     "height": 2,
     "shapeless": false,
-    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2-down", "quantity": 1 }
+    "output": { "type": "block", "code": "vssignalsaddons:blockjunction2x2-north-down", "quantity": 2 }
   }
 ]
