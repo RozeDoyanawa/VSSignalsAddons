@@ -1,0 +1,394 @@
+{
+    "code": "blockjunction2x2l4",
+    "class": "BlockSignalConnection",
+    "entityclass": "Generic",
+    "entityBehaviors": [
+        {
+            "name": "BEBehaviorSignalConnector",
+            "properties": {
+                "signalNodes": [
+                    {
+                        "index": 0,
+                        "isSource": false
+                    },
+                    {
+                        "index": 1,
+                        "isSource": false
+                    },
+                    {
+                        "index": 2,
+                        "isSource": false
+                    },
+                    {
+                        "index": 3,
+                        "isSource": false
+                    },
+                    {
+                        "index": 4,
+                        "isSource": false
+                    },
+                    {
+                        "index": 5,
+                        "isSource": false
+                    },
+                    {
+                        "index": 6,
+                        "isSource": false
+                    },
+                    {
+                        "index": 7,
+                        "isSource": false
+                    }
+                ]
+            }
+        }
+    ],
+    "attributes": {
+        "handbook": {
+			"extraSections": [
+				{ "title": "signals:block-handbooktitle-signals", "text": "vssignalsaddons:block-handbooktext-junction" }
+			]
+		},
+        "signalNodes": [
+            {
+                "index": 0,
+                "name": "con-1",
+                "x1":0.7187, "y1":0.0625, "z1":0.7187, "x2":0.9062, "y2":0.25, "z2":0.9062,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 1,
+                "name": "con-2",
+                "x1":0.7187, "y1":0.0625, "z1":0.0937, "x2":0.9062, "y2":0.25, "z2":0.2812,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 2,
+                "name": "con-3", //0.28125	0.25	0.28125	0.09375	0.0625	0.09375
+                "x1":0.0937, "y1":0.0625, "z1":0.0937, "x2":0.2812, "y2":0.25, "z2":0.2812,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 3,
+                "name": "con-4",  //0.28125	0.25	0.90625	0.09375	0.0625	0.71875
+                "x1": 0.0937, "y1": 0.0625, "z1": 0.7187, "x2": 0.2812, "y2": 0.25, "z2": 0.9062,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 4,
+                "name": "con-5", //0.59375	0.75	0.375	0.40625	0.5625	0.1875
+                "x1": 0.75, "y1": 0.375, "z1": 0.4062, "x2": 0.9375, "y2": 0.5625, "z2": 0.5937,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 5,
+                "name": "con-6", //0.59375	0.75	0.8125	0.40625	0.5625	0.625
+                "x1": 0.5187, "y1": 0.375, "z1": 0.4062, "x2": 0.7062, "y2": 0.5625, "z2": 0.5937,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 6,
+                "name": "con-7", //0.8125	0.75	0.59375	0.625	0.5625	0.40625
+                "x1": 0.2912, "y1": 0.375, "z1": 0.4062, "x2": 0.4787, "y2": 0.5625, "z2": 0.5937,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            },
+            {
+                "index": 7,
+                "name": "con-8", //0.375	0.75	0.59375	0.1875	0.5625	0.40625
+                "x1": 0.0625, "y1": 0.375, "z1": 0.4062, "x2": 0.25, "y2": 0.5625, "z2": 0.5937,
+                "rotateXbytype": {
+                    "*-*-north": 90,
+                    "*-*-south": 270,
+                    "@*-up-(east|west)": 90,
+                    "@*-down-(east|west)": 270,
+                    "@*-south-(east|west)": 180
+                },
+                "rotateYbytype": {
+                    "@*-east-(up|down|north|south)": 270,
+                    "@*-south-(up|down)": 180,
+                    "@*-west-(up|down|north|south)": 90,
+                    "@*-(down-north|up-south)": 180
+                },
+                "rotateZbyType": {
+                    "*-*-up": 180,
+                    "*-*-east": 90,
+                    "*-*-west": 270
+                }
+            }
+        ]
+    },
+    "behaviors": [
+        {
+            "name": "BlockBehaviorCoverWithDirection",
+            "properties": { "handleDrop": false }
+        }
+    ],
+    "lightAbsorption": 0,
+    "drawtype": "json",
+    "variantgroups": [
+        {
+            "code": "orientation",
+            "states": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        },
+        {
+            "code": "side",
+            "states": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
+    ],
+    "shape": {
+        "base": "block/block-terminal-2x2l4",
+        "rotateXbytype": {
+            "*-*-north": 90,
+            "*-*-south": 270,
+            "@*-up-(east|west)": 90,
+            "@*-down-(east|west)": 270,
+            "@*-south-(east|west)": 180
+        },
+        "rotateYbytype": {
+            "@*-east-(up|down|north|south)": 270,
+            "@*-south-(up|down)": 180,
+            "@*-west-(up|down|north|south)": 90,
+            "@*-(down-north|up-south)": 180
+        },
+        "rotateZbyType": {
+            "*-*-up": 180,
+            "*-*-east": 90,
+            "*-*-west": 270
+        }
+    },
+    "sidesolidByType": {
+        "*-down": {
+            "all": false,
+            "down": true
+        },
+        "*-up": {
+            "all": false,
+            "up": true
+        },
+        "*-north": {
+            "all": false,
+            "north": true
+        },
+        "*-east": {
+            "all": false,
+            "east": true
+        },
+        "*-west": {
+            "all": false,
+            "west": true
+        },
+        "*-south": {
+            "all": false,
+            "south": true
+        }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "resistance": 0,
+    "blockmaterial": "Metal",
+    "creativeinventory": {
+        "general": [
+            "*-north-down"
+        ],
+        "signals": [
+            "*-north-down"
+        ]
+    },
+    "drops": [
+		{ "type": "block", "code": "blockjunction2x2x2-north-down" }
+	],
+    "replaceable": 300,
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.0625,
+        "z2": 1,
+        "rotateXbytype": {
+            "*-*-north": 90,
+            "*-*-south": 270,
+            "@*-up-(east|west)": 90,
+            "@*-down-(east|west)": 270,
+            "@*-south-(east|west)": 180
+        },
+        "rotateYbytype": {
+            "@*-east-(up|down|north|south)": 270,
+            "@*-south-(up|down)": 180,
+            "@*-west-(up|down|north|south)": 90,
+            "@*-(down-north|up-south)": 180
+        },
+        "rotateZbyType": {
+            "*-*-up": 180,
+            "*-*-east": 90,
+            "*-*-west": 270
+        }
+    },
+    "collisionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.6,
+        "z2": 1,
+        "rotateXbytype": {
+            "*-*-north": 90,
+            "*-*-south": 270,
+            "@*-up-(east|west)": 90,
+            "@*-down-(east|west)": 270,
+            "@*-south-(east|west)": 180
+        },
+        "rotateYbytype": {
+            "@*-east-(up|down|north|south)": 270,
+            "@*-south-(up|down)": 180,
+            "@*-west-(up|down|north|south)": 90,
+            "@*-(down-north|up-south)": 180
+        },
+        "rotateZbyType": {
+            "*-*-up": 180,
+            "*-*-east": 90,
+            "*-*-west": 270
+        }
+    },
+    "guiTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": 0.0625,
+            "z": 0.5
+        }
+    }
+}
