@@ -11,7 +11,7 @@
     "vssignalsaddons:block-blockcontactor-*": "Contactor",
     "vssignalsaddons:block-blockjunction2x2-*": "Junction Block (2x2)",
     "vssignalsaddons:block-blockjunction2x2x2-*": "Junction Block (2x2 + Raised 2x2)",
-    "vssignalsaddons:block-blockjunction2x2l2-*": "Junction Block (2x2 + Raised 4 in line)",
+    "vssignalsaddons:block-blockjunction2x2l4-*": "Junction Block (2x2 + Raised 4 in line)",
     "vssignalsaddons:block-blockjunctionh2x2-*": "Junction Block (Raised 2x2)",
     "vssignalsaddons:block-handbooktext-contactor":"Used to control another signal with another. Passes through signal through normally closed (NC) ports when not active. Passwes through singal through normally open (NO) pair when energized",
     "vssignalsaddons:block-handbooktext-junction":"Simply a block with several connection points for signal wires. Not internally connected.",
