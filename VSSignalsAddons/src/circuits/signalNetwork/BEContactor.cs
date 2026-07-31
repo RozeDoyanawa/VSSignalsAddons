@@ -37,8 +37,16 @@ class BEContactor : BlockEntity, IBESignalReceptor
     public void OnValueChanged(NodePos pos, byte value)
     {
         if(pos.index != 0) return;
+        bool old = state;
         state = value >= 1;
         SwapBlock(state);
+        if (old != state) {
+            if (state) {
+                Api.World.PlaySoundAt(new AssetLocation("vssignalsaddons:sounds/contactor-engage"), Pos.X, Pos.Y, Pos.Z, randomizePitch: false, volume: 1f);
+            }else{
+                Api.World.PlaySoundAt(new AssetLocation("vssignalsaddons:sounds/contactor-disengage"), Pos.X, Pos.Y, Pos.Z, randomizePitch:false, volume:1f);
+            }
+        }
         BEBehaviorSignalContactor contactor = GetBehavior<BEBehaviorSignalContactor>();
         contactor?.commute(state);
     }
