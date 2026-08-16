@@ -157,7 +157,8 @@ public class BlockEntityCowperStoveSensor : BlockEntity, IBESignalReceptor, IBlo
         dsc.AppendLine(
             Lang.Get(
                 "vssignalsppexlink:gastemperaturesensor-info-rating",
-                ExMeasure.Temperature(_setTemperature)
+                ExMeasure.Temperature(_setTemperature),
+                ExMeasure.Temperature(_cachedTemperature)
             )
         );
     }

@@ -57,9 +57,12 @@ public class BEBehaviorSignalContactor : BEBehaviorSignalConnector
         if (signalMod.Api.Side == EnumAppSide.Client) {
             return;
         }
-        BEContactor be = this.Blockentity as BEContactor;
+        BEContactor? be = this.Blockentity as BEContactor;
         api.Logger.VerboseDebug("BEContactor = " + be);
-        if(be == null) return;
+        if (be == null) {
+            api.Logger.VerboseDebug("BEContactor is null");
+            return;
+        }
         con_no = new Connection(node_no_a, node_no_b, be.state? (byte)0: (byte)15);
         con_nc = new Connection(node_nc_a, node_nc_b, be.state? (byte)15: (byte)0);
         signalMod.netManager.AddConnection(con_no);

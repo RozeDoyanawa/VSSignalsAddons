@@ -12,8 +12,8 @@
     
     "vssignalsppexlink:block-blockcowperstovetempsensor-*": "Temperature Sensor (Cowper Stove)",
   
-    "vssignalsppexlink:gaspressuresensor-info-rating": "Switchover pressure: {0}(g)\n\n",
-    "vssignalsppexlink:gastemperaturesensor-info-rating": "Switchover temperature: {0}(g)\n\n",
+    "vssignalsppexlink:gaspressuresensor-info-rating": "Switchover pressure: {0}(g)\nCurrent pressure reading: {1}\n\n",
+    "vssignalsppexlink:gastemperaturesensor-info-rating": "Switchover temperature: {0}(g)\nCurrent temperature reading: {1}\n\n",
     "vssignalsppexlink:edit-switchover-pressure": "Switchover Pressure\n\n",
     "vssignalsppexlink:edit-switchover-temperature": "Switchover Temperature\n\n",
     

@@ -165,7 +165,8 @@ public class BlockEntityPipeSensorPressure : BlockEntityPipe, IBlockEntityKnobIn
     dsc.AppendLine(
       Lang.Get(
         "vssignalsppexlink:gaspressuresensor-info-rating",
-        ExMeasure.PressureRange(_setPressure, MaxSetPressure)
+        ExMeasure.PressureRange(_setPressure, MaxSetPressure),
+        ExMeasure.Pressure(Pressure)
       )
     );
   }

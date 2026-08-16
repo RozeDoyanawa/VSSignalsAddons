@@ -3,6 +3,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Server;
 using Vintagestory.API.Config;
 using Vintagestory.API.Common;
+using VSSignalsAddons.circuits;
 using VSSignalsAddons.circuits.signalNetwork;
 
 [assembly: ModInfo("VS Signals Addons",
@@ -27,6 +28,7 @@ public class VSSignalsAddonsModSystem : ModSystem {
         Mod.Logger.Notification("Hello from template mod: " + api.Side);
         api.RegisterBlockEntityClass("BlockEntityContactor", typeof(BEContactor));
         api.RegisterBlockEntityBehaviorClass("BEBehaviorSignalContactor", typeof(BEBehaviorSignalContactor));
+        api.RegisterBlockBehaviorClass("BlockBehaviorCover", typeof(BlockBehaviorCover));
     }
 
     public override void StartServerSide(ICoreServerAPI api) {
