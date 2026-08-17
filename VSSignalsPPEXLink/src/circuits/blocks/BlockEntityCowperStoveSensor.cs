@@ -98,7 +98,7 @@ public class BlockEntityCowperStoveSensor : BlockEntity, IBESignalReceptor, IBlo
     }
 
     public void OnValueChanged(NodePos pos, byte value) {
-        throw new System.NotImplementedException();
+        
     }
     
   void UpdateMeshRefs()
